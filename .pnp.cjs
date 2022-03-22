@@ -33,10 +33,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@types/node", "npm:17.0.22"],\
+            ["@types/react", "npm:17.0.41"],\
             ["next", "virtual:ade1c2415d6321edc343c766e62c2f92fee59eeb119eb2b90525f88fedea13c3ba43b7167963ac82549c6ab233e14130fa8f3dd9af97d2bfe6cc3b14393ad464#npm:12.1.0"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:ade1c2415d6321edc343c766e62c2f92fee59eeb119eb2b90525f88fedea13c3ba43b7167963ac82549c6ab233e14130fa8f3dd9af97d2bfe6cc3b14393ad464#npm:17.0.2"],\
-            ["styled-jsx", "virtual:ade1c2415d6321edc343c766e62c2f92fee59eeb119eb2b90525f88fedea13c3ba43b7167963ac82549c6ab233e14130fa8f3dd9af97d2bfe6cc3b14393ad464#npm:5.0.1"]\
+            ["styled-jsx", "virtual:ade1c2415d6321edc343c766e62c2f92fee59eeb119eb2b90525f88fedea13c3ba43b7167963ac82549c6ab233e14130fa8f3dd9af97d2bfe6cc3b14393ad464#npm:5.0.1"],\
+            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -149,11 +152,59 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/node", [\
+        ["npm:17.0.22", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-17.0.22-160c37d7fc-72d1fc8bdc.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:17.0.22"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/prop-types", [\
+        ["npm:15.7.4", {\
+          "packageLocation": "./.yarn/cache/@types-prop-types-npm-15.7.4-592896a9fe-ef6e1899e5.zip/node_modules/@types/prop-types/",\
+          "packageDependencies": [\
+            ["@types/prop-types", "npm:15.7.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/react", [\
+        ["npm:17.0.41", {\
+          "packageLocation": "./.yarn/cache/@types-react-npm-17.0.41-23f75ddbe5-1b086ec0ea.zip/node_modules/@types/react/",\
+          "packageDependencies": [\
+            ["@types/react", "npm:17.0.41"],\
+            ["@types/prop-types", "npm:15.7.4"],\
+            ["@types/scheduler", "npm:0.16.2"],\
+            ["csstype", "npm:3.0.11"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/scheduler", [\
+        ["npm:0.16.2", {\
+          "packageLocation": "./.yarn/cache/@types-scheduler-npm-0.16.2-ba3a7d8c68-b6b4dcfeae.zip/node_modules/@types/scheduler/",\
+          "packageDependencies": [\
+            ["@types/scheduler", "npm:0.16.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["caniuse-lite", [\
         ["npm:1.0.30001319", {\
           "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001319-17883c730d-1c03cc4ca0.zip/node_modules/caniuse-lite/",\
           "packageDependencies": [\
             ["caniuse-lite", "npm:1.0.30001319"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["csstype", [\
+        ["npm:3.0.11", {\
+          "packageLocation": "./.yarn/cache/csstype-npm-3.0.11-b49897178d-95e56abfe9.zip/node_modules/csstype/",\
+          "packageDependencies": [\
+            ["csstype", "npm:3.0.11"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -172,10 +223,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["lan_dashboard", "workspace:."],\
+            ["@types/node", "npm:17.0.22"],\
+            ["@types/react", "npm:17.0.41"],\
             ["next", "virtual:ade1c2415d6321edc343c766e62c2f92fee59eeb119eb2b90525f88fedea13c3ba43b7167963ac82549c6ab233e14130fa8f3dd9af97d2bfe6cc3b14393ad464#npm:12.1.0"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:ade1c2415d6321edc343c766e62c2f92fee59eeb119eb2b90525f88fedea13c3ba43b7167963ac82549c6ab233e14130fa8f3dd9af97d2bfe6cc3b14393ad464#npm:17.0.2"],\
-            ["styled-jsx", "virtual:ade1c2415d6321edc343c766e62c2f92fee59eeb119eb2b90525f88fedea13c3ba43b7167963ac82549c6ab233e14130fa8f3dd9af97d2bfe6cc3b14393ad464#npm:5.0.1"]\
+            ["styled-jsx", "virtual:ade1c2415d6321edc343c766e62c2f92fee59eeb119eb2b90525f88fedea13c3ba43b7167963ac82549c6ab233e14130fa8f3dd9af97d2bfe6cc3b14393ad464#npm:5.0.1"],\
+            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -225,7 +279,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@next/swc-win32-x64-msvc", "npm:12.1.0"],\
             ["@types/fibers", null],\
             ["@types/node-sass", null],\
-            ["@types/react", null],\
+            ["@types/react", "npm:17.0.41"],\
             ["@types/react-dom", null],\
             ["@types/sass", null],\
             ["caniuse-lite", "npm:1.0.30001319"],\
@@ -306,7 +360,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/react-dom-virtual-d9186b90eb/0/cache/react-dom-npm-17.0.2-f551215af1-1c1eaa3bca.zip/node_modules/react-dom/",\
           "packageDependencies": [\
             ["react-dom", "virtual:ade1c2415d6321edc343c766e62c2f92fee59eeb119eb2b90525f88fedea13c3ba43b7167963ac82549c6ab233e14130fa8f3dd9af97d2bfe6cc3b14393ad464#npm:17.0.2"],\
-            ["@types/react", null],\
+            ["@types/react", "npm:17.0.41"],\
             ["loose-envify", "npm:1.4.0"],\
             ["object-assign", "npm:4.1.1"],\
             ["react", "npm:17.0.2"],\
@@ -361,7 +415,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", null],\
             ["@types/babel-plugin-macros", null],\
             ["@types/babel__core", null],\
-            ["@types/react", null],\
+            ["@types/react", "npm:17.0.41"],\
             ["babel-plugin-macros", null],\
             ["react", "npm:17.0.2"]\
           ],\
@@ -382,7 +436,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", null],\
             ["@types/babel-plugin-macros", null],\
             ["@types/babel__core", null],\
-            ["@types/react", null],\
+            ["@types/react", "npm:17.0.41"],\
             ["babel-plugin-macros", null],\
             ["react", "npm:17.0.2"]\
           ],\
@@ -393,6 +447,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/react",\
             "babel-plugin-macros",\
             "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["typescript", [\
+        ["patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367", {\
+          "packageLocation": "./.yarn/cache/typescript-patch-8338853a82-40b493a717.zip/node_modules/typescript/",\
+          "packageDependencies": [\
+            ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -409,7 +472,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/use-subscription-virtual-1c6cc55626/0/cache/use-subscription-npm-1.5.1-d91d77edbb-96e64977a5.zip/node_modules/use-subscription/",\
           "packageDependencies": [\
             ["use-subscription", "virtual:ed6dd1c46dc310663b5e3d3c25322995e9e763061a41c1a171f9f89471d497000fc5d414342c4e6dc5eb33367037cf19703feea6185b60a5244f6f914f2c28af#npm:1.5.1"],\
-            ["@types/react", null],\
+            ["@types/react", "npm:17.0.41"],\
             ["object-assign", "npm:4.1.1"],\
             ["react", "npm:17.0.2"]\
           ],\
