@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16c486a4-f7f2-42d7-9e63-de8193c45627" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.yarn/cache/@types-node-npm-17.0.22-160c37d7fc-72d1fc8bdc.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.yarn/cache/@types-prop-types-npm-15.7.4-592896a9fe-ef6e1899e5.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.yarn/cache/@types-react-npm-17.0.41-23f75ddbe5-1b086ec0ea.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.yarn/cache/@types-scheduler-npm-0.16.2-ba3a7d8c68-b6b4dcfeae.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.yarn/cache/csstype-npm-3.0.11-b49897178d-95e56abfe9.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.yarn/cache/typescript-npm-4.6.2-1d0ebc9cf1-8a44ed7e6f.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.yarn/cache/typescript-patch-8338853a82-40b493a717.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.pnp.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.pnp.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/install-state.gz" beforeDir="false" afterPath="$PROJECT_DIR$/.yarn/install-state.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.yarnrc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.yarnrc.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +32,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="ts.external.directory.path" value="yarn:package.json:typescript" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -52,7 +42,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647991525852</updated>
-      <workItem from="1647991527874" duration="847000" />
+      <workItem from="1647991527874" duration="914000" />
     </task>
     <task id="LOCAL-00001" summary="IDE settings">
       <created>1647991710024</created>
@@ -96,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647992206920</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="setup typescript">
+      <created>1647992445117</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647992445117</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,7 +104,8 @@
     <MESSAGE value="IDE settings" />
     <MESSAGE value="setup yarn" />
     <MESSAGE value="nvmrc" />
-    <option name="LAST_COMMIT_MESSAGE" value="nvmrc" />
+    <MESSAGE value="setup typescript" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup typescript" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

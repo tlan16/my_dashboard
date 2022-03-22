@@ -3,7 +3,7 @@
 
 __metadata:
   version: 6
-  cacheKey: 8
+  cacheKey: 8c9
 
 "@next/env@npm:12.1.0":
   version: 12.1.0
@@ -234,7 +234,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 36dbafd5e640c420446dc05077f858ae4a8aaf5f91feb3c6c16c1b3f50b9fb63f743ef282a3bf0c68645442bef8aee643492f6dc62388a17f87064cde064d181
+  checksum: fadc6828d319935d64394a89e7df46d3b0f299a0880d0e6d638ed18bb156eccbd4c430eda04d979e284893f8883cf253c9424504dde4ee704d4ef15f7bf90acb
   languageName: node
   linkType: hard
 
@@ -272,7 +272,7 @@ __metadata:
     scheduler: ^0.20.2
   peerDependencies:
     react: 17.0.2
-  checksum: 1c1eaa3bca7c7228d24b70932e3d7c99e70d1d04e13bb0843bbf321582bc25d7961d6b8a6978a58a598af2af496d1cedcfb1bf65f6b0960a0a8161cb8dab743c
+  checksum: 3386d9977093e4793dcdd092126a4de066d85c0b856eba52f2c4a972ea59eb3cfd704bd83672e58edd7cb16723dffd57a62d01faad1d764faa7c1c91abbbbe85
   languageName: node
   linkType: hard
 
@@ -313,7 +313,7 @@ __metadata:
       optional: true
     babel-plugin-macros:
       optional: true
-  checksum: 4958238ac8b8e90ac7d906aca3821e3ffb0c70c34c78b87d27f0f11c830c8237c8f4c0e7952dc51373d6fa097b16a023dcc7c9ededd402d8483b5ed2d8cefda9
+  checksum: 90ea3ea0eb6fc787cef1dfd32f6391f6ba3e535153bc62d0e12c0b54694b0432f8e3325153c23db9a41c2a5964ffc0907df6e17700cf83162000b98df73212f5
   languageName: node
   linkType: hard
 
@@ -327,7 +327,7 @@ __metadata:
       optional: true
     babel-plugin-macros:
       optional: true
-  checksum: b85eb03da76b566065b10911a24396659b45a34efa16eef87ed8ff2ce3ea7b9b6a9c0c92c3b2113f92cbca9ab12496690d72329cb9932759ea98d0386acb38a9
+  checksum: f6d8a470de41595cb68e043f768886880c73d95b1d2a8b12151eed79f843bfb6de6004976db80872dc08617443e4975662d2a592924a1b84efb1c0ff29a8c250
   languageName: node
   linkType: hard
 
@@ -337,7 +337,7 @@ __metadata:
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 8a44ed7e6f6c4cb1ebe8cf236ecda2fb119d84dcf0fbd77e707b2dfea1bbcfc4e366493a143513ce7f57203c75da9d4e20af6fe46de89749366351046be7577c
+  checksum: 7bf2e45c68a61bb82e71aaf61187e2e3a8dbb8aa74b0a3269218e4ff38c6140b2296f1df20dddca1f22f5cdee366486ec7188a676366f95c7b0f23c02395b630
   languageName: node
   linkType: hard
 
@@ -347,7 +347,7 @@ __metadata:
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 40b493a71747fb89fa70df104e2c4a5e284b43750af5bea024090a5261cefa387f7a9372411b13030f7bf5555cee4275443d08805642ae5c74ef76740854a4c7
+  checksum: 91c30e48d747e444e03b676d428ee9a7f391a8367b551ba178a6d5b67a9aecbfe52bb082e6ff647c8e5001d616dcdb4e67e57acba1ecb9d8d84f45c286c7212e
   languageName: node
   linkType: hard
 
