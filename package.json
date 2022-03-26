@@ -5,10 +5,9 @@
   "homepage": "https://tlan16.github.io/my_dashboard",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "rimraf docs out && next build && next export",
     "start": "next start",
-    "lint": "next lint",
-    "publish": "rimraf docs out && bash scripts/public.sh"
+    "lint": "next lint"
   },
   "dependencies": {
     "cross-fetch": "^3.1.5",
