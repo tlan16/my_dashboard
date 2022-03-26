@@ -1,27 +1,21 @@
 import Head from 'next/head'
 import fetch from 'cross-fetch'
-import type { InferGetServerSidePropsType, NextPage } from 'next'
 import Link from 'next/link'
-import type { ReadonlyDeep } from 'type-fest'
+import type { FunctionComponent } from 'react'
+import type { Rank } from '../schema/Bilibili/rank'
+import { parseBiliRanks } from '../schema/Bilibili/rank'
 
-interface Rank {
-    data: {
-        title: string
-        bvid: `BV${string}`
-    }[]
-}
+export type BilibiliProps = Rank
 
-export async function getStaticProps(): Promise<ReadonlyDeep<{ props: Rank }>> {
+export const getBilibiliStaticProps = async (): Promise<BilibiliProps> => {
     const response = await fetch('http://api.bilibili.com/x/web-interface/ranking/region?rid=36&day=3', {
         redirect: 'follow',
     })
-    const data: Rank = await response.json()
-    return {
-        props: data,
-    }
+    const json = await response.text()
+    return parseBiliRanks(json)
 }
 
-const Bilibili: NextPage<Rank> = ({ data }: InferGetServerSidePropsType<typeof getStaticProps>) => (
+const Bilibili: FunctionComponent<BilibiliProps> = ({ data }) => (
     <div className="container">
         <Head>
             <title>Bilibili</title>

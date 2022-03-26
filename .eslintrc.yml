@@ -16,6 +16,8 @@ root: true
 rules:
   '@typescript-eslint/consistent-type-imports':
     - error
+  '@typescript-eslint/no-duplicate-imports':
+    - error
   '@typescript-eslint/explicit-module-boundary-types':
     - error
   '@typescript-eslint/naming-convention':
@@ -67,9 +69,7 @@ rules:
   no-async-promise-executor: 'off'
   no-case-declarations: 'off'
   no-dupe-class-members: 'off'
-  no-duplicate-imports:
-    - error
-    - includeExports: true
+  no-duplicate-imports: 'off'
   no-multiple-empty-lines:
     - error
     - max: 1
