@@ -18,7 +18,7 @@ function main() {
     rm -rf "$folder"
     yarn build -o "$folder"
     git add --force "$folder"
-    git commit --message="$message"
+    git commit --allow-empty --message="$message"
     git push --force --set-upstream origin "$branch"
 }
 
