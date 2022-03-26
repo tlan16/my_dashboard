@@ -10,4 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: docker build --build-arg NODE_VERSION="$(cat .nvmrc)" -t dashboard .
-      - run: docker run --rm --env GIT_ACCESS_TOKEN=${{ secrets.GITHUB_TOKEN }} dashboard yarn publish
+      - run: docker run --rm --volume=$(pwd)/out:/app/out dashboard yarn build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
