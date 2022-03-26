@@ -2,6 +2,7 @@
   "name": "lan_dashboard",
   "version": "0.0.1",
   "private": true,
+  "homepage": "https://tlan16.github.io/my_dashboard",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
