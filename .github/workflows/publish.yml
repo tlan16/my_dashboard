@@ -12,8 +12,7 @@ jobs:
       - run: docker build --build-arg NODE_VERSION="$(cat .nvmrc)" -t dashboard .
       - run: docker run --rm --volume=$(pwd)/out:/app/out dashboard yarn build
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
+          branch: gh-pages
+          folder: out
