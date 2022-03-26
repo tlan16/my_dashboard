@@ -6,5 +6,3 @@ const nextConfig = {
     return new Date().toJSON()
   },
 }
-
-export default nextConfig
