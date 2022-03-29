@@ -7,6 +7,9 @@ import ajvInstance from '../avj'
 export interface Rank {
     data: {
         title: string
+        subtitle: string
+        author: string
+        description: string
         bvid: string
     }[]
 }
@@ -17,6 +20,9 @@ const schema: JTDSchemaType<Rank> = {
             elements: {
                 properties: {
                     title: { type: 'string' },
+                    subtitle: { type: 'string' },
+                    author: { type: 'string' },
+                    description: { type: 'string' },
                     bvid: { type: 'string' },
                 },
                 additionalProperties: true,

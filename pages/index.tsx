@@ -1,4 +1,5 @@
-import type { NextPage, GetStaticProps } from 'next'
+import type { NextPage } from 'next'
+import type { ReadonlyDeep } from 'type-fest'
 import type { BilibiliProps } from '../components/Bilibili'
 import Bilibili, { getBilibiliStaticProps } from '../components/Bilibili'
 
@@ -6,9 +7,9 @@ interface HomeProps {
     bilibili: BilibiliProps
 }
 
-const Home: NextPage<HomeProps> = ({ bilibili: { data: bilibili } }) => <Bilibili data={bilibili} />
+const Home: NextPage<HomeProps> = ({ bilibili }) => <Bilibili ranks={bilibili.ranks} />
 
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+export const getStaticProps = async (): Promise<ReadonlyDeep<{ props: HomeProps }>> => {
     const bilibili = await getBilibiliStaticProps()
     return {
         props: {
