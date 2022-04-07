@@ -1,23 +1,15 @@
 import Head from 'next/head'
-import fetch from 'cross-fetch'
 import Link from 'next/link'
 import type { FunctionComponent } from 'react'
-import type { ReadonlyDeep, StringKeyOf } from 'type-fest'
 import { Fragment } from 'react'
-import type { Rank } from '../schema/Bilibili/rank'
-import { parseBiliRanks } from '../schema/Bilibili/rank'
+import type { ReadonlyDeep } from 'type-fest'
+import type { BilibiliCategory } from '../dataSources/bilibili/category'
+import { bilibiliCategories } from '../dataSources/bilibili/category'
+import type { Rank } from '../dataSources/bilibili/schema/ranking'
+import { getRankingByCategory } from '../dataSources/bilibili/ranking'
+import { getFulfilledResults } from '../dataSources/helpers/propmise'
 
 export type BilibiliProps = { ranks: Record<BilibiliCategory, Rank> }
-
-function isPromiseFulfilledResult<T>(
-    result: ReadonlyDeep<PromiseSettledResult<T>>,
-): result is ReadonlyDeep<PromiseFulfilledResult<T>> {
-    return result.status === 'fulfilled'
-}
-
-function getFullfilledResults<T>(results: ReadonlyDeep<Array<PromiseSettledResult<T>>>) {
-    return results.filter(isPromiseFulfilledResult)
-}
 
 export const getBilibiliStaticProps = async (): Promise<ReadonlyDeep<BilibiliProps>> => {
     const results = await Promise.allSettled(
@@ -26,7 +18,7 @@ export const getBilibiliStaticProps = async (): Promise<ReadonlyDeep<BilibiliPro
             return [category, rank] as const
         }),
     )
-    const rankResults = getFullfilledResults(results).map(({ value }) => value)
+    const rankResults = getFulfilledResults(results).map(({ value }) => value)
     return { ranks: Object.fromEntries(rankResults) as Record<BilibiliCategory, Rank> }
 }
 
@@ -62,28 +54,5 @@ const Bilibili: FunctionComponent<BilibiliProps> = ({ ranks }) => (
         </main>
     </div>
 )
-
-const bilibiliCategoryMap = {
-    knowledge: 36,
-} as const
-type BilibiliCategory = StringKeyOf<typeof bilibiliCategoryMap>
-const bilibiliCategories: ReadonlyDeep<BilibiliCategory[]> = Object.keys(bilibiliCategoryMap) as BilibiliCategory[]
-
-const BilibiliApiBaseUri = 'http://api.bilibili.com' as const
-
-/**
- * @see https://github.com/SocialSisterYi/bilibili-API-collect/blob/master/ranking%26dynamic/ranking.md
- */
-const getRankingByCategory = async (category: BilibiliCategory): Promise<ReadonlyDeep<Rank>> => {
-    const searchParams = new URLSearchParams({
-        rid: bilibiliCategoryMap[category].toString(),
-        day: '3',
-    })
-    const response = await fetch(`${BilibiliApiBaseUri}/x/web-interface/ranking/region?${searchParams}`, {
-        redirect: 'follow',
-    })
-    const json = await response.text()
-    return parseBiliRanks(json)
-}
 
 export default Bilibili

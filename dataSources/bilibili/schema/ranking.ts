@@ -1,6 +1,4 @@
-import { AssertionError } from 'assert'
 import type { JTDSchemaType } from 'ajv/dist/jtd'
-import ajvInstance from '../avj'
 
 // type Bvid = `BV${string}` // TODO: how to do literal type with ajv
 
@@ -14,7 +12,7 @@ export interface Rank {
     }[]
 }
 
-const schema: JTDSchemaType<Rank> = {
+export const rankingSchema: JTDSchemaType<Rank> = {
     properties: {
         data: {
             elements: {
@@ -30,17 +28,4 @@ const schema: JTDSchemaType<Rank> = {
         },
     },
     additionalProperties: true,
-}
-const parse = ajvInstance.compileParser(schema)
-
-export const parseBiliRanks = (json: string): Rank => {
-    const data = parse(json) // MyData | undefined
-    if (data === undefined) {
-        throw new AssertionError({
-            message: parse.message,
-            actual: JSON.parse(json),
-        })
-    } else {
-        return data
-    }
 }
